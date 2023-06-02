@@ -1,16 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
-package com.mycompany.teste2;
-
-/**
- *
- * @author carlo
- */
-public class Teste2 {
-
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+public class teste1 {
+    public static void main (String args []){
+        int vetor [] =  new int [10];
+        for (int i =  0;i < vetor.length;i++){
+            vetor[i] = (int) (Math.random() * vetor.length);
+            System.out.println(vetor[i]);
+            
+        }
+        int aux;
+        for(int i = 0; i < vetor.length;i++){
+            for(int j = i + 1; j < vetor.length; j++){
+                if (vetor[i] >  vetor[j]){
+                    aux =  vetor[j];
+                    vetor[j] = vetor[i];
+                    vetor[i] = aux;
+                }
+            }
+        }
+        System.out.println("vetor ordenado");
+        for(int i = 0; i < vetor.length; i++){
+            System.out.println(vetor[i]);
+        }
     }
-}
+    
